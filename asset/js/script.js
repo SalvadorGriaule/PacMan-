@@ -41,6 +41,9 @@ var bordure = [0,0,0,0];
 var x = 0, p = 0;
 var f = 24;
 var i = 0, i2 = 0, i3 = 0;
+/******************Valeur tactile*************************/
+let hammertime = new Hammer(area);
+hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 //********************Valeur pour menu****************** */
 const menu = document.getElementById("menu");
 const nav = document.getElementById("nav");

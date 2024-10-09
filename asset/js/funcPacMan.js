@@ -89,11 +89,20 @@ function calcTurn(tab) {
 }
 
 function eventPacMan() {
-    document.addEventListener("keyup", curEvLisPacMan());
+    console.log(window.visualViewport.width,hammertime);
+    
+    if (window.visualViewport.width > 800){
+        document.addEventListener("keyup", curEvLisPacMan());
+    } else (
+        hammertime.on('swipeleft swiperight swipeup swipedown',function(ev) {
+            evLisPacMan(ev)
+        })
+    )
 }
 
 function evLisPacMan(ev) {
-    if (life == 1 && score < p && ['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown', 's', 'z', 'q', 'd', 'S', 'Z', 'Q', 'D'].includes(ev.key)) {
+    console.log(ev);
+    if (life == 1 && score < p && (['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown', 's', 'z', 'q', 'd', 'S', 'Z', 'Q', 'D'].includes(ev.key)) || ['swipeleft','swipedown','swiperight','swipeup'].includes(ev.type)) {
         // anime universel
         anime({
             targets: '#PacT',
@@ -117,7 +126,7 @@ function evLisPacMan(ev) {
         if (turn % 2 == 1 && rotateTui.length > 0) {
             calcTurn(rotateTui);
         }
-        if (['s', 'S', 'ArrowDown'].includes(ev.key) && PCY < 5 && esp[x].style.borderBottomWidth != "2px" && esp[x + 5].style.borderTopWidth != "2px") {
+        if ((['s', 'S', 'ArrowDown'].includes(ev.key) || ['swipedown'].includes(ev.type)) && PCY < 5 && esp[x].style.borderBottomWidth != "2px" && esp[x + 5].style.borderTopWidth != "2px") {
             x += 5;
 
             PCY = PCY + 1;
@@ -138,7 +147,7 @@ function evLisPacMan(ev) {
             });
 
         }
-        if (['z', 'Z', 'ArrowUp'].includes(ev.key) && PCY > 1 && esp[x].style.borderTopWidth != "2px" && esp[x - 5].style.borderBottomWidth != "2px") {
+        if ((['z', 'Z', 'ArrowUp'].includes(ev.key) || ['swipeup'].includes(ev.type)) && PCY > 1 && esp[x].style.borderTopWidth != "2px" && esp[x - 5].style.borderBottomWidth != "2px") {
             x -= 5;
 
             PCY = PCY - 1;
@@ -158,7 +167,7 @@ function evLisPacMan(ev) {
                 duration: 100
             });
         }
-        if (['d', 'D', 'ArrowRight'].includes(ev.key) && PCX < 5 && esp[x].style.borderRightWidth != "2px" && esp[x + 1].style.borderLeftWidth != "2px") {
+        if ((['d', 'D', 'ArrowRight'].includes(ev.key) || ['swiperight'].includes(ev.type)) && PCX < 5 && esp[x].style.borderRightWidth != "2px" && esp[x + 1].style.borderLeftWidth != "2px") {
             x++;
 
             PCX = PCX + 1;
@@ -178,7 +187,7 @@ function evLisPacMan(ev) {
                 duration: 100
             });
         }
-        if (['q', 'Q', 'ArrowLeft'].includes(ev.key) && PCX > 1 && esp[x].style.borderLeftWidth != "2px" && esp[x - 1].style.borderRightWidth != "2px") {
+        if ((['q', 'Q', 'ArrowLeft'].includes(ev.key) || ['swipeleft'].includes(ev.type)) && PCX > 1 && esp[x].style.borderLeftWidth != "2px" && esp[x - 1].style.borderRightWidth != "2px") {
             x--;
             PCX = PCX - 1;
             PCX2 -= 1;

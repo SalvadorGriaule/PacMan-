@@ -20,6 +20,7 @@ function leaderBoard() {
 async function returnScore() {
     no.removeEventListener('click', returnScore);
     document.removeEventListener("keyup", curEvLisPacMan());
+    hammertime.off('swipeleft swiperight swipeup swipedown');
     niveau.style.display = "none";
     nextLevel.remove();
     restart.remove();
