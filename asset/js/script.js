@@ -11,6 +11,8 @@ const PassNivFnt = document.createElement("div");
 //************ valeur pour niv */
 var niveau = document.getElementById("niv1");
 var esp = niveau.getElementsByClassName("esp");
+let espH = esp[0].clientHeight;
+let espW = esp[0].clientWidth;
 var pointI = niveau.getElementsByClassName("point");
 var rotateTui = 0;
 /************  valeur text fin niv */

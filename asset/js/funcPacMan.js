@@ -132,7 +132,7 @@ function evLisPacMan(ev) {
             PCY = PCY + 1;
             PCY2 += 1;
             PacMan.style.gridArea = `${PCY}/${PCX}/${PCY2}/${PCX2}`;
-            py += 120;
+            py += espH;
             anime({
                 targets: '#PacMan',
                 translateY: py,
@@ -153,7 +153,7 @@ function evLisPacMan(ev) {
             PCY = PCY - 1;
             PCY2 -= 1;
             PacMan.style.gridArea = `${PCY}/${PCX}/${PCY2}/${PCX2}`;
-            py -= 120;
+            py -= espH;
             anime({
                 targets: '#PacMan',
                 translateY: py,
@@ -173,7 +173,7 @@ function evLisPacMan(ev) {
             PCX = PCX + 1;
             PCX2 += 1;
             PacMan.style.gridArea = `${PCY}/${PCX}/${PCY2}/${PCX2}`;
-            px += 120;
+            px += espW;
             anime({
                 targets: '#PacMan',
                 translateX: px,
@@ -192,7 +192,7 @@ function evLisPacMan(ev) {
             PCX = PCX - 1;
             PCX2 -= 1;
             PacMan.style.gridArea = `${PCY}/${PCX}/${PCY2}/${PCX2}`;
-            px -= 120;
+            px -= espW;
             anime({
                 targets: '#PacC',
                 rotate: 180,
@@ -270,7 +270,7 @@ function evLisPacMan(ev) {
             FCX = FCX + 1;
             FCX2 += 1;
             fantom.style.gridArea = `${FCY}/${FCX}/${FCY2}/${FCX2}`;
-            fx += 120;
+            fx += espH;
             anime({
                 targets: '#fantom',
                 translateX: fx,
@@ -284,7 +284,7 @@ function evLisPacMan(ev) {
             FCX = FCX - 1;
             FCX2 -= 1;
             fantom.style.gridArea = `${FCY}/${FCX}/${FCY2}/${FCX2}`;
-            fx -= 120;
+            fx -= espH;
             anime({
                 targets: '#fantom',
                 translateX: fx,
@@ -297,7 +297,7 @@ function evLisPacMan(ev) {
             FCY = FCY - 1;
             FCY2 -= 1;
             fantom.style.gridArea = `${FCY}/${FCX}/${FCY2}/${FCX2}`;
-            fy -= 120;
+            fy -= espH;
             anime({
                 targets: '#fantom',
                 translateY: fy,
@@ -311,7 +311,7 @@ function evLisPacMan(ev) {
             FCY = FCY + 1;
             FCY2 += 1;
             fantom.style.gridArea = `${FCY}/${FCX}/${FCY2}/${FCX2}`;
-            fy += 120;
+            fy += espH;
             anime({
                 targets: '#fantom',
                 translateY: fy,
