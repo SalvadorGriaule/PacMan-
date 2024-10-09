@@ -141,7 +141,8 @@ function choixFinFunc() {
 }
 
 function initNextLevel() {
-
+    console.log("combien de next level",handlersKCF);
+    
     menu.style.display = "none";
     yes.removeEventListener('click', initNextLevel);
     document.removeEventListener('keyup' , curKeyChoixFiN('nextLevel'));

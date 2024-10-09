@@ -24,6 +24,7 @@ body {
     border-color: blue;
     border-width: 3px;
     border-style: solid;
+    position: relative;
 }
 
 #niv1 {
@@ -35,42 +36,42 @@ body {
 
 #niv2 {
     display: none;
-    width: 100vw;
-    height: 80vh;
+    width: 95vw;
+    height: 95vw;
     grid-template: repeat(5, 20%)/ repeat(5, 20%);
 }
 
 #niv3 {
     display: none;
-    width: 100%;
-    height: 100%;
+    width: 95vw;
+    height: 95vw;
     grid-template: repeat(5, 20%)/ repeat(5, 20%);
 }
 
 #niv4 {
-    width: 100%;
-    height: 100%;
+    width: 95vw;
+    height: 95vw;
     display: none;
     grid-template: repeat(5, 20%)/ repeat(5, 20%);
 }
 
 #niv5 {
-    width: 600px;
-    height: 600px;
+    width: 95vw;
+    height: 95vw;
     display: none;
     grid-template: repeat(5, 20%)/ repeat(5, 20%);
 }
 
 #niv6 {
-    width: 600px;
-    height: 600px;
+    width: 95vw;
+    height: 95vw;
     display: none;
     grid-template: repeat(5, 20%)/ repeat(5, 20%);
 }
 
 #niv7 {
-    width: 600px;
-    height: 600px;
+    width: 95vw;
+    height: 95vw;
     display: none;
     grid-template: repeat(5, 20%)/ repeat(5, 20%);
 }
@@ -79,6 +80,14 @@ body {
     width: 80%;
     height: 80%;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#PacC{
+    width: 100%;
+    height: 100%;
 }
 
 #PacT {
@@ -143,8 +152,8 @@ body {
     text-shadow: 4px 4px 0px rgba(255, 255, 255, 0.33);
     text-align: center;
     color: yellow;
-    margin-inline: 200px;
-    margin-block: 200px;
+    margin-inline: 100px;
+    margin-block: 100px;
 
 }
 

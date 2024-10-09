@@ -89,20 +89,17 @@ function calcTurn(tab) {
 }
 
 function eventPacMan() {
-    console.log(window.visualViewport.width,hammertime);
-    
-    if (window.visualViewport.width > 800){
-        document.addEventListener("keyup", curEvLisPacMan());
-    } else (
-        hammertime.on('swipeleft swiperight swipeup swipedown',function(ev) {
-            evLisPacMan(ev)
-        })
-    )
+
+    document.addEventListener("keyup", curEvLisPacMan());
+    hammertime.on('swipeleft swiperight swipeup swipedown', function (ev) {
+        evLisPacMan(ev)
+    })
+
 }
 
 function evLisPacMan(ev) {
     console.log(ev);
-    if (life == 1 && score < p && (['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown', 's', 'z', 'q', 'd', 'S', 'Z', 'Q', 'D'].includes(ev.key)) || ['swipeleft','swipedown','swiperight','swipeup'].includes(ev.type)) {
+    if (life == 1 && score < p && (['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown', 's', 'z', 'q', 'd', 'S', 'Z', 'Q', 'D'].includes(ev.key)) || ['swipeleft', 'swipedown', 'swiperight', 'swipeup'].includes(ev.type)) {
         // anime universel
         anime({
             targets: '#PacT',
@@ -328,7 +325,7 @@ function evLisPacMan(ev) {
     }
     if (score == p) {
         scoreAll += score;
-        score = 0,p = 0;
+        score = 0, p = 0;
         console.log(scoreAll);
         nextLevelFunc();
     }
